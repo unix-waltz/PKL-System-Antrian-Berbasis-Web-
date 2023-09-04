@@ -1,0 +1,109 @@
+#nav{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 99 !important;
+    background-color: white !important;
+  }
+  .indexz{
+    z-index: 99;
+  }
+/* Sidebar styles */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #333;
+    padding-top: 20px;
+    color: white;
+    overflow-x: hidden;
+    z-index: -99;
+}
+
+.list-group {
+    margin-top: 20px;
+}
+
+.list-group a {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.list-group a:hover {
+    background-color: #555;
+}
+
+/* Content styles */
+.col-md-9 {
+    margin-left: 250px; /* Adjust content margin to match sidebar width */
+}
+
+/* Hide horizontal scrollbar in sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/* Media query to make the sidebar collapsible on smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+    }
+
+    .col-md-9 {
+        margin-left: 0;
+    }
+}
+.list-group a {
+    text-align: left;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar initially hidden */
+    width: 250px;
+    background-color: #333;
+    transition: left 0.3s;
+    padding-top: 60px;
+    color: white;
+    z-index: 1;
+}
+
+.sidebar a {
+    color: white;
+}
+
+/* Content styles */
+.col-md-9 {
+    margin-left: 0; /* Adjust content margin when the sidebar is shown */
+}
+
+/* Toggle button styles */
+.toggle-button {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 5px 10px;
+}
+
+/* Show the sidebar when it's expanded */
+.sidebar.active {
+    left: 0;
+}

@@ -1,9 +1,12 @@
-<nav class="navbar navbar-expand-lg" id="nav">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg fixed-top z-3" id="nav">
+    <button class="toggle-button rounded mt-100" onclick="toggleSidebar()">
+        <i class="bi bi-grid-1x2"></i>
+    </button>
+    <div class="container-fluid indexz z-3">
         <a class="navbar-brand" href="#">
             <img src="{{asset('asset/icon.jpg')}}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand" href="#">BMTIBV</a> <!-- Tambahkan ini -->
+        <a class="navbar-brand" href="#">BBPPMPV BMTI</a> <!-- Tambahkan ini -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -34,3 +37,4 @@
         </div>
     </div>
 </nav>
+<br><br><br>
