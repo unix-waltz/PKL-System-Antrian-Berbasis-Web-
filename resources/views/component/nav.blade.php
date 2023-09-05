@@ -1,7 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top z-3" id="nav">
-    <button class="toggle-button rounded mt-100" onclick="toggleSidebar()">
-        <i class="bi bi-grid-1x2"></i>
-    </button>
+    
     <div class="container-fluid indexz z-3">
         <a class="navbar-brand" href="#">
             <img src="{{asset('asset/icon.jpg')}}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">

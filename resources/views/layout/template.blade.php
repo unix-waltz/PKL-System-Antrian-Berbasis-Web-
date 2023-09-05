@@ -10,7 +10,6 @@
 </head>
   <body>
     @include('component.nav')
-    @include('component.sidebar')
     @yield('content')
     @include('component.footer')
     <script src="{{asset('js/script.js')}}"></script>

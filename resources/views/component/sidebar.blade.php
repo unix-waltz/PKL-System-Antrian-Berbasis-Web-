@@ -1,4 +1,6 @@
-
+<button class="toggle-button rounded mt-100" onclick="toggleSidebar()">
+    <i class="bi bi-grid-1x2"></i>
+</button>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
