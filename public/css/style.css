@@ -105,6 +105,9 @@
 .toggle-button:hover{
     background-color: black; 
 }
+.bsr:hover{
+    background-color: #333;
+}
 /* Show the sidebar when it's expanded */
 .sidebar.active {
     left: 0;
