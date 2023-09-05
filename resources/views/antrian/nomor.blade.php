@@ -10,7 +10,7 @@
 
 
 </div>
-<div class="container">
+<div class="container" id="hid">
 <button class="btn btn-dark" align="center" id="printButton"><i class="bi bi-download"></i>&nbsp;Download</button>
 </div>
 @if ($nomor_antrian)

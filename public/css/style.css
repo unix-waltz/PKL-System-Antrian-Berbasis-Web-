@@ -124,6 +124,9 @@
         font-size: 18pt;
         color: #333333;
     }
+    #hid{
+        display: none;
+    }
 }
 
 .kotak-bg{
