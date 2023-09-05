@@ -112,3 +112,24 @@
 .sidebar.active {
     left: 0;
 }
+@media print {
+    /* Atur tampilan cetakan di sini */
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        background-color: #ffffff;
+    }
+
+    h1 {
+        font-size: 18pt;
+        color: #333333;
+    }
+}
+
+.kotak-bg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 70vh;
+    box-shadow : rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

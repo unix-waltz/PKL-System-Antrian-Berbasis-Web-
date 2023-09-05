@@ -7,6 +7,7 @@ Route::get('/antrian',[TaskController::class,'antrian']);
 Route::get('/', function () {
     return redirect('/antrian');
 });
+Route::get('/nomor/antrian/penguna',[TaskController::class,"nomor_antrian"]);
 Route::get('/home', function () {
     return view('home');
 });

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('alamat');
-            $table->string('nomor_antrian');
+            $table->unsignedBigInteger('nomor_antrian')->unique();
+            $table->string('type');
             $table->string('catatan')->nullable();
             $table->timestamps();
         });
