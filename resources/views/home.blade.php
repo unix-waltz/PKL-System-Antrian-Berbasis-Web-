@@ -1,7 +1,8 @@
-@extends('layout.template')
-@section('content')
-@include('component.sidebar')
-@endsection
+@extends('layouts.app')
 
- 
-     
+@section('content')
+<div class="container">
+    
+    
+</div>
+@endsection

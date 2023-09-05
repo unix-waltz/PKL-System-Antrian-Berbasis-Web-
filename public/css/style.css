@@ -1,3 +1,6 @@
+ul li{
+    text-decoration: none ;
+}
 #nav{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 99 !important;

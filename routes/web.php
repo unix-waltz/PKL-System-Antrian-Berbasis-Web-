@@ -11,3 +11,6 @@ Route::get('/nomor/antrian/penguna',[TaskController::class,"nomor_antrian"]);
 Route::get('/home', function () {
     return view('home');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
