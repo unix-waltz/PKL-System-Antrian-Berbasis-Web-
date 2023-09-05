@@ -4,7 +4,6 @@
 <div class="container ">
     <form action="/data_antrian" method="get">
         @csrf
-        <input type="hidden" name="nomor_antrian" value="1">
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Nama :</label>

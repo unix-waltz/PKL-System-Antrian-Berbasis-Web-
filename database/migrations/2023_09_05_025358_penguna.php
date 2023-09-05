@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('penguna', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('alamat');
+            $table->string('nomor_antrian');
+            $table->string('catatan')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('penguna');
     }
 };
