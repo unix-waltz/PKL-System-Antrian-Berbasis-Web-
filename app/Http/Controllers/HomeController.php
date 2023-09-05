@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Penguna;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $count = Penguna::count();
+        $data = Penguna::get();
+        return view('home',["data"=>$data,
+    "count"=>$count ]);
     }
 }
