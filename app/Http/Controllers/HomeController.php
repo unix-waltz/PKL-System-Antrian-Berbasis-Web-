@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// use Illuminate\Support\Facades\DB;
 use App\Models\Penguna;
 use Illuminate\Http\Request;
 
@@ -29,6 +29,6 @@ class HomeController extends Controller
         $data = Penguna::get();
         return view('home',["data"=>$data,
     "count"=>$count,
-"paginate" => $page]);
+"page" => $page]);
     }
 }

@@ -2,20 +2,25 @@
 
 @section('content')
 @if (isset($_GET['start']))
-@foreach ($paginate as $item)
-    <!-- Tampilkan data di sini -->
-@endforeach
 
-<!-- Tombol navigasi 'previous' (kiri) -->
-@if ($data->previousPageUrl())
-    <a href="{{ $data->previousPageUrl() }}" class="btn btn-primary float-left">Previous</a>
-@endif
 
-<!-- Tombol navigasi 'next' (kanan) -->
-@if ($data->nextPageUrl())
-    <a href="{{ $data->nextPageUrl() }}" class="btn btn-primary float-right">Next</a>
-@endif
-
+@foreach($page as $p)
+		<tr>
+			<td>{{ $p->nama }}</td>
+			<td>{{ $p->alamat }}</td>
+			<td>{{ $p->catatan }}</td>
+			<td>{{ $p->type }}{{$p->nomor_antrian}}</td>
+		</tr>
+		@endforeach
+	</table>
+ 
+	<br/>
+	Halaman : {{ $page->currentPage() }} <br/>
+	Jumlah Data : {{ $page->total() }} <br/>
+	Data Per Halaman : {{ $page->perPage() }} <br/>
+ 
+ 
+	{{ $page->links() }}
 @else
 <div class="container">
     <form action="" method="get">

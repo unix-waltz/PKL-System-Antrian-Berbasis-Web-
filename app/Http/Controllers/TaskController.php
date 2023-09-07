@@ -64,7 +64,7 @@ class TaskController extends Controller
   $nama = session('nama');
   $alamat = session('alamat');
       // Lalu kirimkan nomor antrian ke tampilan
-      return view("antrian.nomor", ['nomor_antrian' => $nomor_antrian.$type,
+      return view("antrian.nomor", ['nomor_antrian' =>$type.$nomor_antrian,
     "alamat" => $alamat,
   "nama" => $nama,]);
   }
