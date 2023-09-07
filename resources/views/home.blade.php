@@ -1,8 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
+@if (isset($_GET['start']))
+@foreach ($paginate as $item)
+    <!-- Tampilkan data di sini -->
+@endforeach
+
+<!-- Tombol navigasi 'previous' (kiri) -->
+@if ($data->previousPageUrl())
+    <a href="{{ $data->previousPageUrl() }}" class="btn btn-primary float-left">Previous</a>
+@endif
+
+<!-- Tombol navigasi 'next' (kanan) -->
+@if ($data->nextPageUrl())
+    <a href="{{ $data->nextPageUrl() }}" class="btn btn-primary float-right">Next</a>
+@endif
+
+@else
 <div class="container">
-  <button class="btn btn-dark"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</button>
+    <form action="" method="get">
+  <button class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</button>
+</form>
   <br>
   <h4 align="center">Data Antrean</h4>
   <br>
@@ -32,4 +50,6 @@
     </tbody>
   </table>
 </div>
+@endif
+
 @endsection

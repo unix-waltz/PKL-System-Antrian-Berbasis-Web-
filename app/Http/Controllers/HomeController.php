@@ -24,9 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $page = penguna::paginate(1);
         $count = Penguna::count();
         $data = Penguna::get();
         return view('home',["data"=>$data,
-    "count"=>$count ]);
+    "count"=>$count,
+"paginate" => $page]);
     }
 }
