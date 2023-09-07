@@ -1,7 +1,7 @@
 @extends('layout.template')
 
 @section('content')
-<br><br><br>
+<br>
 @php
 $x = intval($_GET['page']);
 @endphp
@@ -44,9 +44,11 @@ $x = intval($_GET['page']);
   </div>
 
 		@endforeach
-	</table>
-	
-  
+	</table>    
+	<div class="container">
+    <br><div class="btn btn-sm btn-danger float-end"><i class="bi bi-x"></i>Tolak Antrian</div> 
+    <div class="btn btn-sm btn-success float-end m-1 mt-0"><i class="bi bi-check-lg"></i>Terima Antrian</div> 
+  </div>
     <div class="page-wrapper">{{ $page->links('vendor.pagination.default') }}</div>
     @else
     <tr>

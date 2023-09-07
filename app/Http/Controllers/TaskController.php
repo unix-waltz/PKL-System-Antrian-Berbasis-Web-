@@ -40,11 +40,15 @@ class TaskController extends Controller
       $validated = $request->validate([
         'nama' => 'required|max:255|string',
         'alamat' => 'required|string',
-        'catatan' => 'nullable|string'
+        'catatan' => 'nullable|string',
+        "status" => "required|string",
+        
     ]);
     $pengguna = new Penguna();
     $pengguna->nama = $validated['nama'];
     $pengguna->alamat = $validated['alamat'];
+    $pengguna->catatan = $validated['catatan'];
+    $pengguna->status = $validated['status'];
     $pengguna->nomor_antrian = $no_antrian;
     $pengguna->type = $var;
     $pengguna->save();

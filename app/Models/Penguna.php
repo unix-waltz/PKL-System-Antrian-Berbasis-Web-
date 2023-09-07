@@ -10,6 +10,6 @@ class Penguna extends Model
     use HasFactory;
     protected $table= 'penguna';
     protected $fillable= [
-        'nama','alamat','catatan','nomor_antrian','type'
+        'nama','alamat','catatan','nomor_antrian','type','status'
     ];
 }

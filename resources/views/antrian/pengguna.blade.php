@@ -4,7 +4,7 @@
 <div class="container ">
     <form action="/data_antrian" method="get">
         @csrf
-
+        <input type="hidden" name="status" value="Dalam Antrian">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Nama :</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Exs: Rafly Radja" required name="nama">
@@ -15,7 +15,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Catatan :</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="(Opsional)" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="catatan" placeholder="(Opsional)" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-dark" >Submit</button>
     </form>

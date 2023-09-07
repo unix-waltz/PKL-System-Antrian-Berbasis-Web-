@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <a href="/nomor/antrian/start" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
+  <a href="/nomor/antrian/start?page=" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
 
   <br>
   <h4 align="center">Data Antrean</h4>
