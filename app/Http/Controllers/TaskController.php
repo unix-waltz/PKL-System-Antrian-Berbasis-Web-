@@ -69,13 +69,17 @@ class TaskController extends Controller
   "nama" => $nama,]);
   }
 public function antrian_mulai()
-{
-  $page = penguna::paginate(1);
+{ $page = penguna::paginate(1);
   $count = Penguna::count();
   $data = Penguna::get();
-  return view("antrian.mulai",["data"=>$data,
-  "count"=>$count,
-"page" => $page]);
+  if (auth()->check()) {
+    return view("antrian.mulai",["data"=>$data,
+    "count"=>$count,
+  "page" => $page]);
+} else {
+    // Pengguna belum login, arahkan ke halaman login atau tampilkan pesan kesalahan
+    return redirect('/login')->with('error', 'Anda harus login terlebih dahulu.');
+}
 }
 public function about()
 {
