@@ -68,5 +68,13 @@ class TaskController extends Controller
     "alamat" => $alamat,
   "nama" => $nama,]);
   }
-
+public function antrian_mulai()
+{
+  $page = penguna::paginate(1);
+  $count = Penguna::count();
+  $data = Penguna::get();
+  return view("antrian.mulai",["data"=>$data,
+  "count"=>$count,
+"page" => $page]);
+}
 }

@@ -1,31 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-@if (isset($_GET['start']))
 
+<br><br><br><br>
 
-@foreach($page as $p)
-		<tr>
-			<td>{{ $p->nama }}</td>
-			<td>{{ $p->alamat }}</td>
-			<td>{{ $p->catatan }}</td>
-			<td>{{ $p->type }}{{$p->nomor_antrian}}</td>
-		</tr>
-		@endforeach
-	</table>
- 
-	<br/>
-	Halaman : {{ $page->currentPage() }} <br/>
-	Jumlah Data : {{ $page->total() }} <br/>
-	Data Per Halaman : {{ $page->perPage() }} <br/>
- 
- 
-	{{ $page->links() }}
-@else
 <div class="container">
-    <form action="" method="get">
-  <button class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</button>
-</form>
+
+  <a href="/nomor/antrian/start" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
+
   <br>
   <h4 align="center">Data Antrean</h4>
   <br>
@@ -55,6 +37,6 @@
     </tbody>
   </table>
 </div>
-@endif
+
 
 @endsection
