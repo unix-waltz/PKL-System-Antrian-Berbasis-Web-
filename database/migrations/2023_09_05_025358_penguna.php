@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('nomor_antrian')->unique();
             $table->string('type');
             $table->string('catatan')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

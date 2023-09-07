@@ -77,4 +77,8 @@ public function antrian_mulai()
   "count"=>$count,
 "page" => $page]);
 }
+public function about()
+{
+  return view("about");
+}
 }

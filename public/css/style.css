@@ -1,3 +1,73 @@
+.masthead {
+    padding: 6em 0;
+    background-image: url('https://download.unsplash.com/reserve/AXx3QORhRDKAMrbb8pX4_photo%202.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: solid 1.5em #29516a;
+    font-family: oswald, helvetica, sans-serif;
+    text-align: center;
+    color: cfc7c3;
+  }
+  
+  .masthead-intro {
+    margin-bottom: 0.1em;
+    font-family: "open sans", "helvetica", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 1px 1px .5px #000;
+  }
+  
+  .masthead-heading {
+    margin-top: -0.2em;
+    font-family: "oswald", "helvetica", sans-serif;
+    font-size: 6em;
+    letter-spacing: .03em;
+    text-shadow: 1px 1px .5px #000;
+  }
+  /*-------Body Section--------*/
+  
+  .aboutme-section,
+  .fewthings-section {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    font-family: Oswald, helvetica, sans-serif;
+    color: #042f42;
+  }
+  
+  .fewthings-section > h2 {
+    /*typography declarations*/
+    
+    font-size: 14pt;
+  }
+  
+  .aboutme-section > p,
+  .fewthings-section > p {
+    /*typography declarations*/
+    
+    font-family: open sans, helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: light;
+  }
+  
+  .footer-content,
+  .footer-contact {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    background-color: #29516a;
+    color: #eee5df;
+    padding: 5px; 
+    font-size: 14px;
+  }
+  
+  .footer-contact > li {
+    display: inline-block;
+    margin: 1em;
+    font-size: 16px;
+  }
+  
+  
 ul li{
     text-decoration: none ;
 }
