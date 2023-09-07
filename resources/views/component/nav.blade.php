@@ -61,10 +61,12 @@
                             @csrf
                         </form>
                     </div>
+                   
                 @endguest
             </div>
        
         </div>
+     
     </div>
 </nav>
 <br><br><br>

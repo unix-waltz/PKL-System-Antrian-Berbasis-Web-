@@ -1,3 +1,13 @@
+ /* Tambahkan transisi ke elemen alert */
+ .alert {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* Ganti opacity menjadi 1 saat alert muncul */
+  .alert.show {
+    opacity: 1;
+  }
 .masthead {
     padding: 6em 0;
     background-image: url('https://download.unsplash.com/reserve/AXx3QORhRDKAMrbb8pX4_photo%202.JPG');

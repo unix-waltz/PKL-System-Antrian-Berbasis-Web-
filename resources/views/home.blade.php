@@ -17,6 +17,7 @@
         <th scope="col">#</th>
         <th scope="col">Nama</th>
         <th scope="col">Alamat</th>
+        <th scope="col">Status</th>
         <th scope="col">Catatan Penguna</th>
       </tr>
     </thead>
@@ -27,16 +28,25 @@
         @foreach ($data as $d )
             
       <tr>
+        <a href="">
         <th>{{$num++}}</th>
         <td>{{$d->nama}}</td>
         <td>{{$d->alamat}}</td>
+        <td>{{$d->status}}
+          
+          <span class="badge text-bg-secondary">Dalam Antrian</span>
+          <span class="badge text-bg-success">Selesai Mengantri</span>
+          <span class="badge text-bg-danger">Antrian Ditolak</span>
+         </td>
         <td>{{$d->catatan}}</td>
+      </a>
       </tr>
       @endforeach
 
     </tbody>
   </table>
 </div>
+@include('component.sidebar')
 
 
 @endsection
