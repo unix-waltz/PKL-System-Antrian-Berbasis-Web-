@@ -15,3 +15,5 @@ Route::get('/home', function () {
 \Illuminate\Support\Facades\Auth::routes();
 Route::get('/nomor/antrian/start',[TaskController::class,"antrian_mulai"]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::put('/update',[TaskController::class,"update_status"])->name('update');
+Route::put('/updates',[TaskController::class,"canceled"])->name('canceled');

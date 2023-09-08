@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Penguna;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\isTrue;
+
 class TaskController extends Controller
 {
     public function antrian(){
@@ -88,5 +90,25 @@ public function antrian_mulai()
 public function about()
 {
   return view("about");
+}
+public function update_status(Request $id){
+  $id = $id->id;
+$update = Penguna::find($id);
+if($update){
+  $update->status = "Selesai Mengantri";
+  $update->save();
+ $id = $id+1;
+  return redirect("/nomor/antrian/start?page=$id");
+}
+}
+public function canceled(Request $id){
+  $id = $id->id;
+$update = Penguna::find($id);
+if($update){
+  $update->status = "Antrian Ditolak";
+  $update->save();
+  $id = $id+1;
+  return redirect("/nomor/antrian/start?page=$id");
+}
 }
 }

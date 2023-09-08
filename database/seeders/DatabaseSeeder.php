@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Console\Seeds\Selesai MengantriithoutModelEvents;
 use App\Models\User;
 use App\Models\Penguna;
 use Illuminate\Database\Seeder;
@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat1",
             "nomor_antrian" => 1,
-            "status" => "w"
+            "status" => "Dalam Antrian"
         ]);
         Penguna::create([
             'nama' => "orang2",
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat2",
             "nomor_antrian" => 2,
-            "status" => "w"
+            "status" => "Dalam Antrian"
         ]);
         Penguna::create([
             'nama' => "orang3",
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat3",
             "nomor_antrian" => 3,
-            "status" => "w"
+            "status" => "Antrian Ditolak"
         ]);
         Penguna::create([
             'nama' => "orang4",
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat4",
             "nomor_antrian" => 4,
-            "status" => "w"
+            "status" => "Antrian Ditolak"
         ]);
         Penguna::create([
             'nama' => "orang5",
@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat5",
             "nomor_antrian" => 5,
-            "status" => "w"
+            "status" => "Selesai Mengantri"
         ]);
         Penguna::create([
             'nama' => "orang6",
@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat6",
             "nomor_antrian" => 6,
-            "status" => "w"
+            "status" => "Selesai Mengantri"
         ]);
         Penguna::create([
             'nama' => "orang7",
@@ -71,7 +71,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat7",
             "nomor_antrian" => 7,
-            "status" => "w"
+            "status" => "Selesai Mengantri"
         ]);
         Penguna::create([
             'nama' => "orang8",
@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
             "type" => "A",
             "alamat" => "alamat8",
             "nomor_antrian" => 8,
-            "status" => "w"
+            "status" => "Dalam Antrian"
         ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

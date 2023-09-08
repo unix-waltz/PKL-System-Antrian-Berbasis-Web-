@@ -26,17 +26,27 @@
             $num =1;
         @endphp
         @foreach ($data as $d )
-            
+            @php
+              switch ($d->status){
+                case "Antrian Ditolak" :
+                $col = 'danger';
+                break;
+                case "Selesai Mengantri" :
+                $col = 'success';
+                break;
+                default :
+                $col = 'secondary';
+
+              }
+            @endphp
       <tr>
         <a href="">
         <th>{{$num++}}</th>
         <td>{{$d->nama}}</td>
         <td>{{$d->alamat}}</td>
-        <td>{{$d->status}}
-          
-          <span class="badge text-bg-secondary">Dalam Antrian</span>
-          <span class="badge text-bg-success">Selesai Mengantri</span>
-          <span class="badge text-bg-danger">Antrian Ditolak</span>
+        <td>
+          <span class="badge text-bg-{{$col}}">{{$d->status}}</span>
+
          </td>
         <td>{{$d->catatan}}</td>
       </a>

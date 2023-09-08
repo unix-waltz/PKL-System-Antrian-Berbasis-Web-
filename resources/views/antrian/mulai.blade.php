@@ -14,6 +14,12 @@ $x = intval($_GET['page']);
 </div>
 
 @endif
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 @if (count($page) > 0)
   
 
@@ -46,8 +52,28 @@ $x = intval($_GET['page']);
 		@endforeach
 	</table>    
 	<div class="container">
-    <br><div class="btn btn-sm btn-danger float-end"><i class="bi bi-x"></i>Tolak Antrian</div> 
-    <div class="btn btn-sm btn-success float-end m-1 mt-0"><i class="bi bi-check-lg"></i>Terima Antrian</div> 
+    <br>
+
+    <form method="POST" action="{{ route('canceled', ['id' => $p->id]) }}">
+      
+      @csrf
+      @method('put')
+      <div class="btn btn-sm btn-danger float-end">
+          <button class="btn btn-sm btn-danger float-end" type="submit"><i class="bi bi-x"></i> Tolak Antrian</button>
+      </div>
+  </form>
+  
+  <form method="POST" action="{{ route('update', ['id' => $p->id]) }}">
+      @csrf
+      @method('put')
+      <div class="btn btn-sm btn-primary float-end m-1 mt-0">
+          <button class="btn btn-sm btn-primary float-end  mt-0" type="submit"><i class="bi bi-check-lg"></i> Tandai Selesai</button>
+      </div>
+  </form>
+  
+
+    {{-- <div class="btn btn-sm btn-danger float-end"><i class="bi bi-x"></i>Tolak Antrian</div> 
+    <div class="btn btn-sm btn-primary float-end m-1 mt-0"><i class="bi bi-check-lg"></i>Tandai Selesai</div>  --}}
   </div>
     <div class="page-wrapper">{{ $page->links('vendor.pagination.default') }}</div>
     @else
