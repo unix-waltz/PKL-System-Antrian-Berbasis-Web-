@@ -13,11 +13,8 @@ return new class extends Migration
     {
         Schema::create('penguna', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('alamat');
             $table->unsignedBigInteger('nomor_antrian')->unique();
             $table->string('type');
-            $table->string('catatan')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });

@@ -4,9 +4,9 @@
 
   <div class="kotak-bg rounded">
     <br><br><br><br><br><br><br><br><br><br><br>
-    <h3 align="center" class="text-center">{{$nama}}</h3>
+    <h3 align="center" class="text-center">&nbsp;</h3>
     <h1 align="center" class="text-centern f-9">{{$nomor_antrian}}</h1>
-    <p align="center" class="text-center">{{$alamat}}</p>
+    <p align="center" class="text-center">&nbsp;</p>
 
 
 </div>
