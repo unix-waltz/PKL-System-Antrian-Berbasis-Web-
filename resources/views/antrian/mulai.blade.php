@@ -49,6 +49,34 @@ $x = intval($_GET['page']);
   
   </div>
 
+<script>
+  function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+
+    setTimeout(function(){
+      var audio2 = document.getElementById("audio2");
+    audio2.play();
+}, 2500);
+    
+setTimeout(function(){
+      var audio3 = document.getElementById("audio3");
+    audio3.play();
+}, 3000);
+
+setTimeout(function(){
+      var audio4 = document.getElementById("audio4");
+    audio4.play();
+}, 4900);
+
+setTimeout(function(){
+      var audio5 = document.getElementById("audio5");
+    audio5.play();
+}, 6900);
+  }
+</script>
+
+
 		@endforeach
 	</table>    
 	<div class="container">
@@ -70,10 +98,16 @@ $x = intval($_GET['page']);
           <button class="btn btn-sm btn-primary float-end  mt-0" type="submit"><i class="bi bi-check-lg"></i> Tandai Selesai</button>
       </div>
   </form>
-  
+  {{var_dump($p->id);}}
+  <div class="btn float-end m-1 mt-0 p-1">
+  <input type="button" class="btn btn-dark float-end  mt-0" value="Panggil Sekarang" onclick="play()">
+  <audio id="audio" src="{{ asset('file/audio/antrian.wav') }}"></audio>
+  <audio id="audio2" src="{{ asset('file/audio/a.wav') }}"></audio>
+ <audio id="audio3" src="{{ asset('file/audio/delapanratus.wav') }}"></audio>
+  <audio id="audio4" src="{{ asset('file/audio/delapanpuluh.wav') }}"></audio>
+   <audio id="audio5" src="{{ asset('file/audio/delapan.wav') }}"></audio>
 
-    {{-- <div class="btn btn-sm btn-danger float-end"><i class="bi bi-x"></i>Tolak Antrian</div> 
-    <div class="btn btn-sm btn-primary float-end m-1 mt-0"><i class="bi bi-check-lg"></i>Tandai Selesai</div>  --}}
+  </div>
   </div>
     <div class="page-wrapper">{{ $page->links('vendor.pagination.default') }}</div>
     @else
@@ -101,8 +135,7 @@ $x = intval($_GET['page']);
   </div>
 	
 	</table>
-	
-  
+
  @endif
     @include('component.sidebar')
 
