@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use App\Models\Asset;
 use App\Models\typeA;
 use App\Models\typeB;
 use App\Models\typeC;
 use App\Models\typeD;
 use App\Models\typeE;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,7 +19,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::create([
+        Asset::create([
+           "main_title" => "BBPPMPV BMTI",
+        ]);
+        User::create([
             'name' => 'TestMan',
             'email' => 'TestMan12121212@gmail.com',
             "password" => bcrypt("TestMan12121212"),
@@ -26,7 +30,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        \App\Models\User::create([
+        User::create([
             'name' => 'Super Admin',
             'email' => 'riosraskaa@gmail.com',
             "password" => bcrypt("RioPutra1210"),

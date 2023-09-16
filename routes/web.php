@@ -33,6 +33,6 @@ Route::post('/logout',[AuthController::class,"logout"])->name('logout')->middlew
 Route::post('/pendaftaran-Admin',[SuperAdminController::class,"pendaftaran_Admin"])->Middleware('auth')->name('registerAuth');
 Route::get('/pendaftaran-Admin',[SuperAdminController::class,"view_pendaftaran_admin"])->Middleware('auth');
 // loket
-
-
+Route::put('/main_title_update',[SuperAdminController::class,"main_title_update"])->middleware('auth');
+Route::get('/main-title',[SuperAdminController::class,"main_title"])->Middleware('auth');
 Route::get('/loket/{type}/',[AdminController::class,"loket"])->Middleware('auth');

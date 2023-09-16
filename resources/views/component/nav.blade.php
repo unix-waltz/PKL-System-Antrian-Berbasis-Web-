@@ -4,7 +4,10 @@
         <a class="navbar-brand" href="#">
             <img src="{{asset('asset/icon.jpg')}}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand" href="#">BBPPMPV BMTI</a> <!-- Tambahkan ini -->
+        <a class="navbar-brand" href="#">@php
+$brand = App\Models\Asset::find(1);
+        @endphp
+        {{$brand->main_title}}</a> <!-- Tambahkan ini -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -22,7 +25,7 @@
                     @endguest
                     
                 </li>
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     @guest
                        @else 
                     
@@ -37,7 +40,7 @@
                     </ul>
                     @endguest
                 </li>
-              
+               --}}
             </ul>
             <div class="d-flex">
                 
