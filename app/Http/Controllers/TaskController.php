@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Penguna;
+use App\Http\Controllers\Helper;
 use App\Models\typeA;
 use App\Models\typeB;
 use App\Models\typeC;
@@ -42,6 +41,7 @@ switch($var){
             $model = new typeE;
             break;
 }
+
 return $data = ["type" => $type, "model" =>$model];
 
 }
@@ -113,11 +113,13 @@ return $data = ["type" => $type, "model" =>$model];
 
 
 
-public function antrian_mulai()
+public function antrian_mulai($type)
 {
-   $page = penguna::paginate(1);
-  $count = Penguna::count();
-  $data = Penguna::get();
+$model = Helper::model($type);
+
+   $page = $model::paginate(1);
+  $count = $model::count();
+  $data = $model::get();
   if (auth()->check()) {
     return view("antrian.mulai",["data"=>$data,
     "count"=>$count,
@@ -128,28 +130,32 @@ public function antrian_mulai()
 }
 }
 
+
+
 public function about()
 {
   return view("about");
 }
-public function update_status(Request $id){
-  $id = $id->id;
-$update = Penguna::find($id);
+public function update_status($type, $id){
+ $model = Helper::model($type);
+  $id = (int)$id;
+$update = $model::find($id);
 if($update){
   $update->status = "Selesai Mengantri";
   $update->save();
  $id = $id+1;
-  return redirect("/nomor/antrian/start?page=$id");
+  return redirect("/nomor/antrian/".$type."/start?page=$id");
 }
 }
-public function canceled(Request $id){
-  $id = $id->id;
-$update = Penguna::find($id);
+public function canceled($type, $id){
+  $id = (int)$id;
+  $model = Helper::model($type);
+$update = $model::find($id);
 if($update){
   $update->status = "Antrian Ditolak";
   $update->save();
   $id = $id+1;
-  return redirect("/nomor/antrian/start?page=$id");
+  return redirect("/nomor/antrian/".$type."/start?page=$id");
 }
 }
 }

@@ -8,6 +8,11 @@
   .alert.show {
     opacity: 1;
   }
+  #loket{
+    height: 300px;
+    border: 1px solid black;
+    margin: 10px;
+  }
 .masthead {
     padding: 6em 0;
     background-image: url('https://download.unsplash.com/reserve/AXx3QORhRDKAMrbb8pX4_photo%202.JPG');

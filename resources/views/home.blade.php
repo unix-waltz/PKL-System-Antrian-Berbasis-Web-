@@ -1,62 +1,48 @@
 @extends('layout.template')
 
 @section('content')
-
-<br><br><br><br>
-
-<div class="container">
-
-  <a href="/nomor/antrian/start?page=" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
-
-  <br>
-  <h4 align="center">Data Antrean</h4>
-  <br>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Alamat</th>
-        <th scope="col">Status</th>
-        <th scope="col">Catatan Penguna</th>
-      </tr>
-    </thead>
-    <tbody>
-        @php
-            $num =1;
-        @endphp
-        @foreach ($data as $d )
-            @php
-              switch ($d->status){
-                case "Antrian Ditolak" :
-                $col = 'danger';
-                break;
-                case "Selesai Mengantri" :
-                $col = 'success';
-                break;
-                default :
-                $col = 'secondary';
-
-              }
-            @endphp
-      <tr>
-        <a href="">
-        <th>{{$num++}}</th>
-        <td>{{$d->nama}}</td>
-        <td>{{$d->alamat}}</td>
-        <td>
-          <span class="badge text-bg-{{$col}}">{{$d->status}}</span>
-
-         </td>
-        <td>{{$d->catatan}}</td>
-      </a>
-      </tr>
-      @endforeach
-
-    </tbody>
-  </table>
-</div>
 @include('component.sidebar')
-
+<br><br>
+<div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col" id="loket" >
+<br>
+<h4>Loket A</h4>
+<br>
+        <a href="/loket/A/" class="btn  btn-dark">Ke Loket A</a>
+      </div>
+      <div class="col" id="loket">
+        <br>
+        <h4>Loket B</h4>
+        <br>
+        <a href="/loket/B/" class="btn  btn-dark">Ke Loket B</a>
+      </div>
+      <div class="col" id="loket">
+        <br>
+        <h4>Loket C</h4>
+        <br>
+        <a href="/loket/C/" class="btn  btn-dark">Ke Loket C</a>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col" id="loket">
+        <br>
+        <h4>Loket D</h4>
+        <br>
+        <a href="/loket/D/" class="btn  btn-dark">Ke Loket D</a>
+      </div>
+      <div class="col" >
+        
+      </div>
+      <div class="col" id="loket">
+        <br>
+        <h4>Loket E</h4>
+        <br>
+        <a href="/loket/E/" class="btn  btn-dark">Ke Loket E</a>
+      </div>
+    </div>
+  </div>
 
 @endsection

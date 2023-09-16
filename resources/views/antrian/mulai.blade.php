@@ -95,24 +95,17 @@
         <div class="container">
             <br>
 
-            <form method="POST" action="{{ route('canceled', ['id' => $p->id]) }}">
+           
+            <div class="btn btn-sm btn-danger float-end">
+                <a href=" /cancel/{{$p->type}}/{{$p->id}}" class="btn btn-sm btn-danger float-end" type="submit"><i class="bi bi-x"></i> Tolak
+                    Antrian</a>
+            </div>
+            
 
-                @csrf
-                @method('put')
-                <div class="btn btn-sm btn-danger float-end">
-                    <button class="btn btn-sm btn-danger float-end" type="submit"><i class="bi bi-x"></i> Tolak
-                        Antrian</button>
-                </div>
-            </form>
-
-            <form method="POST" action="{{ route('update', ['id' => $p->id]) }}">
-                @csrf
-                @method('put')
-                <div class="btn btn-sm btn-primary float-end m-1 mt-0">
-                    <button class="btn btn-sm btn-primary float-end  mt-0" type="submit"><i class="bi bi-check-lg"></i>
-                        Tandai Selesai</button>                    
-                </div>
-            </form>
+            <div class="btn btn-sm btn-primary float-end">
+                <a href="/update/{{$p->type}}/{{$p->id}} " class="btn btn-sm btn-primary float-end" type="submit"><i class="bi bi-x"></i> Terima
+                    Antrian</a>
+            </div>
             <div class="btn float-end m-1 mt-0 p-1">
                 <input type="button" class="btn btn-dark float-end  mt-0" value="Panggil Sekarang" onclick="play()">
                 <audio id="audio" src="{{ asset('file/audio/antrian.wav') }}"></audio>
