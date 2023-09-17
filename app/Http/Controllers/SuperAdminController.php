@@ -33,7 +33,7 @@ return redirect('/home')->with("add_admin","succes add new admin");
         if($update){
 $update->main_title = $valid['main_title'];
 $update->save();
-return "beres";
+return redirect('/main-title')->with('massage','succes change main title');
         }
     }
 }

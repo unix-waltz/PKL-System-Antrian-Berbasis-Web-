@@ -4,6 +4,13 @@
 @include('component.sidebar')
 <div class="container">
     <br><br>
+    @if (session()->has('massage'))
+    <div class="container-sm">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{ session()->get('massage') }}
+     </div>
+    </div>
+    @endif
     <h1 align="center">Ubah Title Web</h1>
     <form action="/main_title_update" method="post">
         @csrf
