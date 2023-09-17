@@ -1,12 +1,14 @@
+@php
+$brand = App\Models\Asset::find(1);
+$ico = "/storage/favicon/".$brand->favicon;
+        @endphp
 <nav class="navbar navbar-expand-lg fixed-top z-3" id="nav">
     
     <div class="container-fluid indexz z-3">
         <a class="navbar-brand" href="#">
-            <img src="{{asset('asset/icon.jpg')}}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+            <img src="{{asset($ico)}}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand" href="#">@php
-$brand = App\Models\Asset::find(1);
-        @endphp
+        <a class="navbar-brand" href="#">
         {{$brand->main_title}}</a> <!-- Tambahkan ini -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">

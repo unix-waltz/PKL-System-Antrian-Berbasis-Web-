@@ -38,8 +38,8 @@ return $layout;
     }
 
     public static function AdminRole($role){
-        if(!$role == env('ENV_LOGGING_ROLE')){
-        return redirect('/home');
+        if($role != env('ENV_LOGGING_ROLE')){
+        return $role;
         }
             }
 }

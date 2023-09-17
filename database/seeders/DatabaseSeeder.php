@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
     {
         Asset::create([
            "main_title" => "BBPPMPV BMTI",
+           "favicon" => "icon.jpg",
         ]);
         User::create([
             'name' => 'TestMan',

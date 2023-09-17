@@ -23,17 +23,31 @@ return redirect('/home')->with("add_admin","succes add new admin");
     }
 
     public function main_title(){
-        return view('auth.asset');
+        return view('auth.asset',[
+            "old" => Asset::find(1),
+        ]);
     }
-    public function main_title_update(Request $newT){
-        $valid =$newT->validate([
-            "main_title" =>"required",
+    public function main_update(Request $request){
+        $valid =$request->validate([
+            "main_title" =>"min:1|nullable",
+            "favicon" => "image|file|max:10000|nullable",
         ]);
         $update = Asset::find(1);
         if($update){
+            if($request->file('favicon')===null){
+                $newFaviconName = $request->old_img;
+            }else{
+            $newFaviconName = time() . '_' . $request->file('favicon')->getClientOriginalName();
+            $newFaviconPath = $request->file('favicon')->storeAs('favicon', $newFaviconName);
+
+            if ($update->favicon) {
+                \Illuminate\Support\Facades\Storage::delete($update->favicon);
+            }
+        }
 $update->main_title = $valid['main_title'];
+$update->favicon = $newFaviconName;
 $update->save();
-return redirect('/main-title')->with('massage','succes change main title');
+return redirect('/main-title')->with('massage','succes change!');
         }
     }
 }

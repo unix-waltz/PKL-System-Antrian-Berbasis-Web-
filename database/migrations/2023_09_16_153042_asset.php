@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('asset', function (Blueprint $table) {
             $table->id();
+            $table->string('favicon')->nullable();
             $table->string('main_title')->nullable();
             $table->timestamps();
         });
