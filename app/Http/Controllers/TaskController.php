@@ -167,4 +167,29 @@ if($update){
   return redirect("/nomor/antrian/".$type."/start?page=$id");
 }
 }
+
+
+
+public function mupdate_status($type, $id){
+  $model = Helper::model($type);
+   $id = (int)$id;
+ $update = $model::find($id);
+ if($update){
+   $update->status = "Selesai Mengantri";
+   $update->save();
+  $id = $id+1;
+   return redirect("/loket/".$type."/");
+ }
+ }
+ public function mcanceled($type, $id){
+   $id = (int)$id;
+   $model = Helper::model($type);
+ $update = $model::find($id);
+ if($update){
+   $update->status = "Antrian Ditolak";
+   $update->save();
+   $id = $id+1;
+   return redirect("/loket/".$type."/");
+ }
+ }
 }

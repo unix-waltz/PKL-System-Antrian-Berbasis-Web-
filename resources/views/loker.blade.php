@@ -6,6 +6,7 @@
     float: left;
   }
 </style>
+
 <br><br><br><br>
 
 <div class="container">
@@ -25,12 +26,27 @@
       </tr>
     </thead>
     <tbody>
-        @php
-            $num =1;
-        @endphp
+     
         @foreach ($data as $d )
         
-            @php
+        @php
+       
+        
+        $a = App\Http\Controllers\TaskController::pecahAngka($d->nomor_antrian);
+        if($a['ratusan'] == 0 && $a['puluhan'] == 0){
+          $a1=$a['satuan'];
+          $a2 = "";
+          $a3 = "";
+        }else if($a['ratusan'] == 0){
+          $a1 = $a['puluhan'];
+          $a2 = ['satuan'];
+          $a3 = '';
+        }else{
+        $a1 =$a['ratusan'];
+        $a2 = $a['puluhan'];
+        $a3 = $a['satuan'];
+      }
+     
               switch ($d->status){
                 case "Antrian Ditolak" :
                 $col = 'danger';
@@ -50,20 +66,52 @@
           <span class="badge text-bg-{{$col}}">{{$d->status}}</span>
          </td>
        <td>
-        <a href="" id="lefth" class="btn btn-dark btn-sm" name="start"><i class="bi bi-megaphone"></i>&nbsp;Pangil</a>
+        <script>
+          
+          function play(n) {
+              var audio = document.getElementById(`audio`);
+              audio.play();
 
+              setTimeout(function() {
+                  var audio2 = document.getElementById(`audio2`);
+                  audio2.play();
+              }, 2500);
+
+              setTimeout(function() {
+                  var audio3 = document.getElementById(`${n}audio3`);
+                  audio3.play();
+              }, 3000);
+
+              setTimeout(function() {
+                  var audio4 = document.getElementById(`${n}audio4`);
+                  audio4.play();
+              }, 4900);
+
+              setTimeout(function() {
+                  var audio5 = document.getElementById(`${n}audio5`);
+                  audio5.play();
+              }, 6900);
+          }
+      </script>
+        <button  id="lefth" class="btn btn-dark btn-sm" onclick="play({{(int)$d->nomor_antrian}})" name="start"><i class="bi bi-megaphone"></i>&nbsp;Pangil </button>
+     
+         <audio id="audio" src="{{ asset('file/audio/antrian.wav') }}"></audio>
+      <audio id="audio2" src="{{ asset("file/audio/".$d->type.".wav") }}"></audio>
+      <audio id="{{$d->nomor_antrian}}audio3" src="{{ asset("file/audio/".$a1.".wav") }}"></audio>
+      <audio id="{{$d->nomor_antrian}}audio4" src="{{ asset("file/audio/".$a2.".wav") }}"></audio>
+      <audio id="{{$d->nomor_antrian}}audio5" src="{{ asset("file/audio/".$a3.".wav") }}"></audio>
+
+    
         <div class="d-flex" id="lefth">
               <a id="navbarDropdown" class="nav-link dropdown-toggle ml-auto" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-dark btn-sm"> <i class="bi bi-caret-right-fill"></i>  status</button>
               </a>
               <div class="dropdown-menu dropdown-menu-" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href=""">
-                  bbbbbbbbbbbb
-                     </a><a class="dropdown-item" href=""">
-                      bbbbbbbbbbbb
-                         </a><a class="dropdown-item" href=""">
-                          bbbbbbbbbbbb
-                             </a>
+                <a class="dropdown-item" href="/m/update/{{$d->type}}/{{$d->id}}">
+                  Terima Antrian
+                     </a><a class="dropdown-item" href="/m/cancel/{{$d->type}}/{{$d->id}}">
+                     Tolak ANtrian
+                         </a>
               </div>
       </div>
 
@@ -71,7 +119,7 @@
        </td>
       </tr>
       @endforeach
-
+     
     </tbody>
   </table>
 </div>

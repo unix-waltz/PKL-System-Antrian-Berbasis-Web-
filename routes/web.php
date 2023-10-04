@@ -23,6 +23,8 @@ Route::get('/nomor/antrian/{type}/start',[TaskController::class,"antrian_mulai"]
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/update/{type}/{id}',[TaskController::class,"update_status"])->name('update');
 Route::get('/cancel/{type}/{id}',[TaskController::class,"canceled"])->name('canceled');
+Route::get('/m/update/{type}/{id}',[TaskController::class,"mupdate_status"])->name('mupdate');
+Route::get('/m/cancel/{type}/{id}',[TaskController::class,"mcanceled"])->name('mcanceled');
 // super admin
 
 Route::get('/login',[AuthController::class,'loginview'])->name('login')->middleware('guest');

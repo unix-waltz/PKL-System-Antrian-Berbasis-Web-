@@ -30,7 +30,7 @@
             $a3 = "";
           }else if($a['ratusan'] == 0){
             $a1 = $a['puluhan'];
-            $a2 = ['satuan'];
+            $a2 = $a['satuan'];
             $a3 = '';
           }else{
           $a1 =$a['ratusan'];
