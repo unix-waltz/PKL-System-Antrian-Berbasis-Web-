@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Asset;
 use Illuminate\Http\Request;
 use App\Models\typeA;
 use App\Models\typeB;
@@ -45,39 +46,51 @@ return $layout;
         }
             }
 
-//             public static function loket($role){
-              
-// $db = \App\Models\User::find($role);
-// $dbh = (int)$db->loket;
-// if($dbh !== 0 && $dbh > 0){
-// switch($dbh){
-//     case  1 :
-//         $data = ;
-//         break;
-//         case  2 :
-//             $data = ;
-//             break;
-//             case  3 :
-//                 $data = ;
-//                 break;
-//                 case  4 :
-//                     $data = ;
-//                     break;
-//                     case  5 :
-//                         $data = ;
-//                         break;
-//                         case  6 :
-//                             $data = ;
-//                             break;
-// default :
-// $data = 0;
-// break;
-// }
-    
-// }else{
-   
-// }
+            public static function loket($role){
+$d = Asset::find(1);
+$db = \App\Models\User::find($role);
+$dbh = (int)$db->loket;
+if($dbh !== 0 && $dbh > 0){
+switch($dbh){
+    case  1 :
+        $data = $d->name_loket_a;
+        $n = "A";
+        break;
+        case  2 :
+            $data = $d->name_loket_b;
+        $n = "B";
 
-// return $data;
-//             }
+            break;
+            case  3 :
+        $n = "C";
+        $data = $d->name_loket_c;
+                break;
+                case  4 :
+        $n = "D";
+        $data = $d->name_loket_d;
+                    break;
+                    case  5 :
+        $n = "E";
+        $data = $d->name_loket_e;
+                        break;
+                        case  6 :
+        $n = "F";
+        $data = $d->name_loket_f;
+                            break;
+default :
+$data = 404;
+$n = false;
+break;
+}
+    
+}else{
+   $data= 404;
+   $n = 404;
+}
+
+return [
+"title" => $data,
+"loket" => $n
+];
+            }
 }
