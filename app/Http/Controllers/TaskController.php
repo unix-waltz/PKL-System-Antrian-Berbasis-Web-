@@ -7,7 +7,7 @@ use App\Models\typeB;
 use App\Models\typeC;
 use App\Models\typeD;
 use App\Models\typeE;
-
+use App\Models\TypeF;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\isTrue;
@@ -40,6 +40,10 @@ switch($var){
             $type = "E";
             $model = new typeE;
             break;
+            case 6 :
+              $type = "F";
+              $model = new TypeF;
+              break;
 }
 
 return $data = ["type" => $type, "model" =>$model];
@@ -49,8 +53,11 @@ return $data = ["type" => $type, "model" =>$model];
     {
     
 
-      $var = mt_rand(1,5);
+      $var = $request->key;
+  
+     
    $ress = $this->logicNomor($var);
+  //  @dd($ress);
    $var = $ress['type'];
    $model = new $ress['model'];
   $no_antrian = $model::max('nomor_antrian');

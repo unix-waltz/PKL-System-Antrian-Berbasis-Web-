@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('typeC', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
             $table->unsignedBigInteger('nomor_antrian')->unique();
             $table->string('type');
             $table->string('status')->nullable();

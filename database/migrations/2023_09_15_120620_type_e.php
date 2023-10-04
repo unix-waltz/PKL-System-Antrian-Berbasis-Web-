@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('nomor_antrian')->unique();
             $table->string('type');
+            $table->string('name')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });

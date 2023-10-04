@@ -7,6 +7,7 @@ use App\Models\typeB;
 use App\Models\typeC;
 use App\Models\typeD;
 use App\Models\typeE;
+use App\Models\TypeF;
 use Illuminate\Http\Request;
 
 use function PHPSTORM_META\type;
@@ -30,6 +31,9 @@ switch($type){
                     case  "E" :
                         $model = new typeE;
                         break;
+                        case  "F" :
+                            $model = new TypeF;
+                            break;
     }
 
     $data = $model::all();

@@ -17,6 +17,7 @@ $result = $request->validate([
 "email" => "required|email",
 "role" => "required",
 "password" => "required",
+"loket" => "nullable|nullable",
 ]);
 User::create($result);
 return redirect('/home')->with("add_admin","succes add new admin");
@@ -49,5 +50,8 @@ $update->favicon = $newFaviconName;
 $update->save();
 return redirect('/main-title')->with('massage','succes change!');
         }
+    }
+    public function pengaturan_layanan(){
+        return view('auth.pengaturan_layanan');
     }
 }

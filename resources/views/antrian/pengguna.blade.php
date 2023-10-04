@@ -2,11 +2,96 @@
 @section('content')
 <br><br>
 <div class="container ">
-    <form action="/data_antrian" method="get">
-        @csrf
-        <input type="hidden" name="status" value="Dalam Antrian">
-      <button type="submit" class="btn btn-dark" >Ambil Nomor Antrian</button>
-    </form>
+
+    <div>
+      @csrf
+    <button type="submit" class="btn btn-dark" >Pilih Pelayanan Anda</button>
+  </div>
 </div>
+
+<br><br>
+<div class="container text-center">
+    <div class="row align-items-center">
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="1">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="2">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="3">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="4">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="5">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+      <form action="/data_antrian" method="get" class="col" id="loket" >
+        @csrf
+      <div class="col"  >
+<br>
+<h4>Pelayanan </h4>
+<br>
+      <input type="hidden" name="status" value="Dalam Antrian">
+      <input type="hidden" name="key" value="6">
+
+        <button type="submit" class="btn  btn-dark">Ambil Nomor Antrian</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
 
 @endsection

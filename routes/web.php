@@ -36,3 +36,4 @@ Route::get('/pendaftaran-Admin',[SuperAdminController::class,"view_pendaftaran_a
 Route::put('/main_title_update',[SuperAdminController::class,"main_update"])->middleware('auth');
 Route::get('/main-title',[SuperAdminController::class,"main_title"])->Middleware('auth');
 Route::get('/loket/{type}/',[AdminController::class,"loket"])->Middleware('auth');
+Route::get('/pengaturan-layanan',[SuperAdminController::class,"pengaturan_layanan"])->Middleware('auth');

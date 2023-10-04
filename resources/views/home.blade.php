@@ -1,3 +1,4 @@
+
 @extends('layout.template')
 
 @section('content')
@@ -5,13 +6,19 @@
 <br><br>
 <div class="container text-center">
     <div class="row align-items-center">
+      <form action="">
       <div class="col" id="loket" >
 <br>
 <h4>Loket A</h4>
 <br>
-        <a href="/loket/A/" class="btn  btn-dark">Ke Loket A</a>
+        <a href="/loket/A/" class="btn  btn-dark">Ke Loket A
+          @php
+$c = Auth()->user()->id;
+    $r = App\Http\Controllers\Helper::loket($c);
+@endphp</a>
       </div>
-      <div class="col" id="loket">
+    </form>
+      {{-- <div class="col" id="loket">
         <br>
         <h4>Loket B</h4>
         <br>
@@ -33,15 +40,18 @@
         <br>
         <a href="/loket/D/" class="btn  btn-dark">Ke Loket D</a>
       </div>
-      <div class="col" >
-        
-      </div>
       <div class="col" id="loket">
         <br>
         <h4>Loket E</h4>
         <br>
         <a href="/loket/E/" class="btn  btn-dark">Ke Loket E</a>
       </div>
+      <div class="col" id="loket">
+        <br>
+        <h4>Loket F</h4>
+        <br>
+        <a href="/loket/F/" class="btn  btn-dark">Ke Loket E</a>
+      </div> --}}
     </div>
   </div>
 
