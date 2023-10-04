@@ -40,10 +40,6 @@ return redirect('/home')->with("add_admin","succes add new admin");
             }else{
             $newFaviconName = time() . '_' . $request->file('favicon')->getClientOriginalName();
             $newFaviconPath = $request->file('favicon')->storeAs('favicon', $newFaviconName);
-
-            if ($update->favicon) {
-                \Illuminate\Support\Facades\Storage::delete($update->favicon);
-            }
         }
 $update->main_title = $valid['main_title'];
 $update->favicon = $newFaviconName;
@@ -53,5 +49,20 @@ return redirect('/main-title')->with('massage','succes change!');
     }
     public function pengaturan_layanan(){
         return view('auth.pengaturan_layanan');
+    }
+    public function _pengaturan_layanan(Request $request){
+       $data = Asset::find(1);
+       if ($data) {
+        $data->name_loket_a = $request->nameA;
+        $data->name_loket_b = $request->nameB;
+        $data->name_loket_c = $request->nameC;
+        $data->name_loket_d = $request->nameD;
+        $data->name_loket_e = $request->nameE;
+        $data->name_loket_f = $request->nameF;
+        $data->save();
+        return redirect('/pengaturan-layanan')->with('message',"Record updated successfully.");
+    } else {
+        return redirect('/pengaturan-layanan')->with('message',"Record updated Failed.");
+    }
     }
 }

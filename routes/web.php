@@ -37,3 +37,4 @@ Route::put('/main_title_update',[SuperAdminController::class,"main_update"])->mi
 Route::get('/main-title',[SuperAdminController::class,"main_title"])->Middleware('auth');
 Route::get('/loket/{type}/',[AdminController::class,"loket"])->Middleware('auth');
 Route::get('/pengaturan-layanan',[SuperAdminController::class,"pengaturan_layanan"])->Middleware('auth');
+Route::put('/pengaturan-layanan',[SuperAdminController::class,"_pengaturan_layanan"])->Middleware('auth')->name('pengaturan_layanan');

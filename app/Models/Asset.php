@@ -9,5 +9,5 @@ class Asset extends Model
 {
     use HasFactory;
     protected $table ="asset";
-    protected $fillable =["main_title","favicon"];
+    protected $guarded =["id"];
 }

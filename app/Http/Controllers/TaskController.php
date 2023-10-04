@@ -8,6 +8,7 @@ use App\Models\typeC;
 use App\Models\typeD;
 use App\Models\typeE;
 use App\Models\TypeF;
+use App\Models\Asset;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\isTrue;
@@ -15,7 +16,8 @@ use function PHPUnit\Framework\isTrue;
 class TaskController extends Controller
 {
     public function antrian(){
-      return view('antrian.pengguna');
+      $data = Asset::find(1);
+      return view('antrian.pengguna',['data' => $data]);
     }
 public function logicNomor($var)
 {

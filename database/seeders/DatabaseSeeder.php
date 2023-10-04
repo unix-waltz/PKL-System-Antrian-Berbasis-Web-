@@ -9,6 +9,7 @@ use App\Models\typeB;
 use App\Models\typeC;
 use App\Models\typeD;
 use App\Models\typeE;
+use App\Models\TypeF;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -22,7 +23,14 @@ class DatabaseSeeder extends Seeder
         Asset::create([
            "main_title" => "BBPPMPV BMTI",
            "favicon" => "icon.jpg",
+           "name_loket_f" => "name_loket_f",
+           "name_loket_a" => "name_loket_a",
+           "name_loket_b" => "name_loket_b",
+           "name_loket_c" => "name_loket_c",
+           "name_loket_d" => "name_loket_d",
+           "name_loket_e" => "name_loket_e",
         ]);
+    
         User::create([
             'name' => 'TestMan',
             'email' => 'TestMan12121212@gmail.com',
@@ -162,5 +170,6 @@ typeE::create([
     "type" => "E",
     "status" => "Dalam Antrian",
 ]);
+
     }
 }

@@ -44,39 +44,40 @@ return $layout;
         return $role;
         }
             }
-            public static function loket($role){
-              
-$db = \App\Models\User::find($role);
-$dbh = (int)$db->loket;
-if($dbh !== 0 && $dbh > 0){
-switch($dbh){
-    case  1 :
-        $data = ;
-        break;
-        case  2 :
-            $data = ;
-            break;
-            case  3 :
-                $data = ;
-                break;
-                case  4 :
-                    $data = ;
-                    break;
-                    case  5 :
-                        $data = ;
-                        break;
-                        case  6 :
-                            $data = ;
-                            break;
-default :
-$data = 0;
-break;
-}
-    
-}else{
-   
-}
 
-return $data;
-            }
+//             public static function loket($role){
+              
+// $db = \App\Models\User::find($role);
+// $dbh = (int)$db->loket;
+// if($dbh !== 0 && $dbh > 0){
+// switch($dbh){
+//     case  1 :
+//         $data = ;
+//         break;
+//         case  2 :
+//             $data = ;
+//             break;
+//             case  3 :
+//                 $data = ;
+//                 break;
+//                 case  4 :
+//                     $data = ;
+//                     break;
+//                     case  5 :
+//                         $data = ;
+//                         break;
+//                         case  6 :
+//                             $data = ;
+//                             break;
+// default :
+// $data = 0;
+// break;
+// }
+    
+// }else{
+   
+// }
+
+// return $data;
+//             }
 }

@@ -16,7 +16,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_a}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="1">
@@ -29,7 +29,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_b}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="2">
@@ -42,7 +42,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_c}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="3">
@@ -58,7 +58,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_d}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="4">
@@ -70,7 +70,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_e}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="5">
@@ -82,7 +82,7 @@
         @csrf
       <div class="col"  >
 <br>
-<h4>Pelayanan </h4>
+<h4>{{$data->name_loket_f}}</h4>
 <br>
       <input type="hidden" name="status" value="Dalam Antrian">
       <input type="hidden" name="key" value="6">
