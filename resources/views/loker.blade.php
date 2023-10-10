@@ -12,6 +12,7 @@
 <div class="container">
 
   <a href="/nomor/antrian/{{$type}}/start?page=" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
+  <button class="btn-dark btn" onclick="window.location.reload()"><i class="bi bi-arrow-clockwise"></i>&nbsp; Reload</button>
 
   <br>
   <h4 align="center">Data Antrean</h4>
