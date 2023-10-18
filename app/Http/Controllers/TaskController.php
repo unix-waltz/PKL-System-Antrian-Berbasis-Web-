@@ -59,11 +59,19 @@ return $data = ["type" => $type, "model" =>$model];
   
      
    $ress = $this->logicNomor($var);
-  //  @dd($ress);
+ 
    $var = $ress['type'];
    $model = new $ress['model'];
-  $no_antrian = $model::max('nomor_antrian');
+  $no_antrian = $model::orderBy('nomor_antrian', 'desc')->first();
+  $no_antrian_sebelum = $no_antrian->nomor_antrian;
+  $no_antrian_sebelum = (int)$no_antrian_sebelum;
+ 
 
+
+
+
+$no_antrian = $model::orderBy('nomor_antrian', 'desc')->first();
+  $no_antrian = $no_antrian->nomor_antrian;
     
     $no_antrian =  $no_antrian + 1;
       

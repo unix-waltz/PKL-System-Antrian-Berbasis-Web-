@@ -46,130 +46,134 @@ class DatabaseSeeder extends Seeder
             "role" => "SuperAdmin",
         ]);
 typeA::create([
-    "nomor_antrian" => 1,
+    "nomor_antrian" => 0,
     "type" => "A",
     "status" => "Dalam Antrian",
 ]);
 typeB::create([
-    "nomor_antrian" => 1,
+    "nomor_antrian" => 0,
     "type" => "B",
     "status" => "Dalam Antrian",
 ]);
 typeD::create([
-    "nomor_antrian" => 1,
+    "nomor_antrian" => 0,
     "type" => "D",
     "status" => "Dalam Antrian",
 ]);
 typeC::create([
-    "nomor_antrian" => 1,
+    "nomor_antrian" => 0,
     "type" => "C",
     "status" => "Dalam Antrian",
 ]);
 typeE::create([
-    "nomor_antrian" => 1,
+    "nomor_antrian" => 0,
     "type" => "E",
     "status" => "Dalam Antrian",
 ]);
-typeA::create([
-    "nomor_antrian" => 2,
-    "type" => "A",
+// typeA::create([
+//     "nomor_antrian" => 2,
+//     "type" => "A",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeB::create([
+//     "nomor_antrian" => 2,
+//     "type" => "B",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeD::create([
+//     "nomor_antrian" => 2,
+//     "type" => "D",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeC::create([
+//     "nomor_antrian" => 2,
+//     "type" => "C",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeE::create([
+//     "nomor_antrian" => 2,
+//     "type" => "E",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeA::create([
+//     "nomor_antrian" => 3,
+//     "type" => "A",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeB::create([
+//     "nomor_antrian" => 3,
+//     "type" => "B",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeD::create([
+//     "nomor_antrian" => 3,
+//     "type" => "D",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeC::create([
+//     "nomor_antrian" => 3,
+//     "type" => "C",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeE::create([
+//     "nomor_antrian" => 3,
+//     "type" => "E",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeA::create([
+//     "nomor_antrian" => 4,
+//     "type" => "A",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeB::create([
+//     "nomor_antrian" => 4,
+//     "type" => "B",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeD::create([
+//     "nomor_antrian" => 4,
+//     "type" => "D",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeC::create([
+//     "nomor_antrian" => 4,
+//     "type" => "C",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeE::create([
+//     "nomor_antrian" => 4,
+//     "type" => "E",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeA::create([
+//     "nomor_antrian" => 5,
+//     "type" => "A",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeB::create([
+//     "nomor_antrian" => 5,
+//     "type" => "B",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeD::create([
+//     "nomor_antrian" => 5,
+//     "type" => "D",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeC::create([
+//     "nomor_antrian" => 5,
+//     "type" => "C",
+//     "status" => "Dalam Antrian",
+// ]);
+// typeE::create([
+//     "nomor_antrian" => 5,
+//     "type" => "E",
+//     "status" => "Dalam Antrian",
+// ]);
+TypeF::create([
+    "nomor_antrian" => 0,
+    "type" => "F",
     "status" => "Dalam Antrian",
 ]);
-typeB::create([
-    "nomor_antrian" => 2,
-    "type" => "B",
-    "status" => "Dalam Antrian",
-]);
-typeD::create([
-    "nomor_antrian" => 2,
-    "type" => "D",
-    "status" => "Dalam Antrian",
-]);
-typeC::create([
-    "nomor_antrian" => 2,
-    "type" => "C",
-    "status" => "Dalam Antrian",
-]);
-typeE::create([
-    "nomor_antrian" => 2,
-    "type" => "E",
-    "status" => "Dalam Antrian",
-]);
-typeA::create([
-    "nomor_antrian" => 3,
-    "type" => "A",
-    "status" => "Dalam Antrian",
-]);
-typeB::create([
-    "nomor_antrian" => 3,
-    "type" => "B",
-    "status" => "Dalam Antrian",
-]);
-typeD::create([
-    "nomor_antrian" => 3,
-    "type" => "D",
-    "status" => "Dalam Antrian",
-]);
-typeC::create([
-    "nomor_antrian" => 3,
-    "type" => "C",
-    "status" => "Dalam Antrian",
-]);
-typeE::create([
-    "nomor_antrian" => 3,
-    "type" => "E",
-    "status" => "Dalam Antrian",
-]);
-typeA::create([
-    "nomor_antrian" => 4,
-    "type" => "A",
-    "status" => "Dalam Antrian",
-]);
-typeB::create([
-    "nomor_antrian" => 4,
-    "type" => "B",
-    "status" => "Dalam Antrian",
-]);
-typeD::create([
-    "nomor_antrian" => 4,
-    "type" => "D",
-    "status" => "Dalam Antrian",
-]);
-typeC::create([
-    "nomor_antrian" => 4,
-    "type" => "C",
-    "status" => "Dalam Antrian",
-]);
-typeE::create([
-    "nomor_antrian" => 4,
-    "type" => "E",
-    "status" => "Dalam Antrian",
-]);
-typeA::create([
-    "nomor_antrian" => 5,
-    "type" => "A",
-    "status" => "Dalam Antrian",
-]);
-typeB::create([
-    "nomor_antrian" => 5,
-    "type" => "B",
-    "status" => "Dalam Antrian",
-]);
-typeD::create([
-    "nomor_antrian" => 5,
-    "type" => "D",
-    "status" => "Dalam Antrian",
-]);
-typeC::create([
-    "nomor_antrian" => 5,
-    "type" => "C",
-    "status" => "Dalam Antrian",
-]);
-typeE::create([
-    "nomor_antrian" => 5,
-    "type" => "E",
-    "status" => "Dalam Antrian",
-]);
-
     }
 }
