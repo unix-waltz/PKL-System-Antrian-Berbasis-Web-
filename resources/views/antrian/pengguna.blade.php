@@ -1,3 +1,26 @@
+@php
+  use App\Models\typeA;
+use App\Models\typeB;
+use App\Models\typeC;
+use App\Models\typeD;
+use App\Models\typeE;
+use App\Models\TypeF;
+
+$modelA = new typeA;
+$modelB = new typeB;
+$modelC = new typeC;
+$modelD = new typeD;
+$modelE = new typeE;
+$modelF = new TypeF;
+date_default_timezone_set(env('ADD_REGION_TIME'));
+$waktu_sekarang = (int)date('H');
+
+$result = App\Http\Controllers\Helper::riwayat($modelA, $modelB, $modelC, $modelD, $modelE, $modelF);
+// @dd($result);
+@endphp
+
+
+
 @extends('layout.template')
 @section('content')
 <br><br>

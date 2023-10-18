@@ -13,7 +13,6 @@
 
   <a href="/nomor/antrian/{{$type}}/start?page=" class="btn btn-dark" name="start"><i class="bi bi-caret-right-fill"></i>&nbsp;Mulai Antrian</a>
   <button class="btn-dark btn" onclick="window.location.reload()"><i class="bi bi-arrow-clockwise"></i>&nbsp; Reload</button>
-
   <br>
   <h4 align="center">Data Antrean</h4>
   <br>
@@ -94,7 +93,8 @@
               }, 6900);
           }
       </script>
-        <button  id="lefth" class="btn btn-dark btn-sm" onclick="play({{(int)$d->nomor_antrian}})" name="start"><i class="bi bi-megaphone"></i>&nbsp;Pangil </button>
+     
+        <button  id="lefth" class="btn btn-dark btn-sm" onclick="play({{(int)$d->nomor_antrian}})" name="start"><i class="bi bi-megaphone" "></i>&nbsp;Pangil </button>
      
          <audio id="audio" src="{{ asset('file/audio/antrian.wav') }}"></audio>
       <audio id="audio2" src="{{ asset("file/audio/".$d->type.".wav") }}"></audio>
