@@ -40,3 +40,5 @@ Route::get('/main-title',[SuperAdminController::class,"main_title"])->Middleware
 Route::get('/loket/{type}/',[AdminController::class,"loket"])->Middleware('auth');
 Route::get('/pengaturan-layanan',[SuperAdminController::class,"pengaturan_layanan"])->Middleware('auth');
 Route::put('/pengaturan-layanan',[SuperAdminController::class,"_pengaturan_layanan"])->Middleware('auth')->name('pengaturan_layanan');
+Route::get('/riwayat',[SuperAdminController::class,"riwayat"])->Middleware('auth');
+Route::get('/riwayat/del/{id}',[SuperAdminController::class,'del_riwayat'])->middleware('auth');

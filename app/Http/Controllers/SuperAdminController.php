@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Asset;
+use App\Models\Riwayat;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -64,5 +65,20 @@ return redirect('/main-title')->with('massage','succes change!');
     } else {
         return redirect('/pengaturan-layanan')->with('message',"Record updated Failed.");
     }
+    }
+    public function riwayat(){
+        $data = Riwayat::all();
+        return view('auth.riwayat',[
+            'data' => $data
+        ]);
+    }
+    public function del_riwayat($id){
+$riwayat = Riwayat::find($id);
+if($riwayat){
+$riwayat->delete();
+return redirect('/riwayat')->with('message',"Delete successfully.");
+} else {
+    return redirect('/riwayat')->with('message'," Failed, something wrongs!");
+}
     }
 }

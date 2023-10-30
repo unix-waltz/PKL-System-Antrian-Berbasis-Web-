@@ -16,7 +16,7 @@ $c = Auth()->user()->role;
                     <a style="{{$r}}" href="/pendaftaran-Admin" class="text-left"> <i class="bi bi-layout-split"></i>&nbsp;Tambah Admin/Petugas</a>
                     <a style="{{$r}}" href="/main-title" class="text-left"> <i class="bi bi-layout-split"></i>&nbsp;Ubah Website</a>
                     <a style="{{$r}}" href="/pengaturan-layanan" class="text-left"> <i class="bi bi-layout-split"></i>&nbsp;Layanan</a>
-                    <a style="{{$r}}" href="/pengaturan-layanan" class="text-left"> <i class="bi bi-layout-split"></i>&nbsp;Riwayat</a>
+                    <a style="{{$r}}" href="/riwayat" class="text-left"> <i class="bi bi-layout-split"></i>&nbsp;Riwayat</a>
                 </div>
             </div>
         </div>
